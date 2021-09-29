@@ -10,7 +10,7 @@ Estimating farm-to-farm disease transmission using pathogen genetic and animal m
 1. Metadata spreadsheet may include farm production type, herd size, or farm's geographical coordinates
 2. All other farms' coordinates in the area where the samples were collected may be used for farm's spatial point density calculation; locationall.csv
 
-# Getting start
+# Getting started
 1. Open "Restimation-ergm.R"
 2. Install all required packages
 3. At line 13 of the script: change "x" to "path to your working directory" that keeps the prerequisite files
