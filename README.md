@@ -1,6 +1,12 @@
 # FarmR
 Estimating farm-to-farm disease transmission using pathogen genetic and animal movement data
 
+# Concept
+We integrate transmission tree analysis (https://github.com/xavierdidelot/TransPhylo) with social network analysis to uncover the livestock farm-level disease transmission link. Series of pathogen genetic data collected from multiple farm outbreaks along with corresponding animal movement data are recommended to be an input of this analysis.
+
+# Prerequisites
+Time resolved phylogenetic tree must be created from the well-aligned pathogen genetic sequences via BEAST software (https://beast.community/).
+
 # Input data; example file
 1. Time resolved phylogenetic tree (NEXUS format from BEAST MCC tree) of pathogen's genetic sequences; beastmcc.tree
 2. Metadata of the sequence samples including at least ID of isolates, sampling date, and farm premises; metadata.csv
@@ -22,5 +28,8 @@ Estimating farm-to-farm disease transmission using pathogen genetic and animal m
 3. Farm-level reproduction number (R) estimation: Boxplot of ICL ~ MPL with the cut-off value at MPL = 1 and statistic summary of the farm-level R
 
 # Farm-to-farm transmission network (Additional outputs for ERGMs analysis)
-1. Dyads: dyadic relationship between all samples including transmission link (1,0), movement path-length (steps), sampling interval (days), and distance between farms (km)
+1. Dyads: dyadic relationship between all samples, including transmission link (1,0), movement path-length (steps), sampling interval (days), and distance between farms (km)
 2. Node attributes: same as the metadata file plus sampling season, farm's spatial point density, and in-degree and out-degree of the 6-month period (according to sampling date) movement network 
+
+# What's ERGMs? How to use it?
+https://cran.r-project.org/web/packages/ergm/ergm.pdf
